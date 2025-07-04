@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clean Code: Chapter 2 Example</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+    .example {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+    .bad {
+      background-color: #ffe5e5;
+    }
+    .clean {
+      background-color: #e5ffe5;
+    }
+    button {
+      padding: 6px 12px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Clean Code - Chapter 2: Meaningful Names</h1>
+
+  <!--  Bad Code Example -->
+  <div class="example bad">
+    <h2>Bad Code</h2>
+    <p>Function and variable names are unclear.</p>
+    <button onclick="x()">Click Me</button>
+  </div>
+
+  <!--  Clean Code Example -->
+  <div class="example clean">
+    <h2> Clean Code</h2>
+    <p>Function and variable names clearly show intent.</p>
+    <button onclick="showCurrentDateTime()">Show Current Date & Time</button>
+  </div>
+
+  <script>
+    //  Bad version
+    function x() {
+      let a = new Date();
+      alert("d: " + a);
+    }
+
+    //  Clean version
+    function showCurrentDateTime() {
+      const currentDateTime = new Date();
+      alert("Current Date & Time: " + currentDateTime);
+    }
+  </script>
+
+</body>
+</html>
+
+
+
